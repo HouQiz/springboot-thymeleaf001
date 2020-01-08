@@ -63,8 +63,20 @@ public class MyThymeleaf {
         return "demo6";
     }
 
-    public String xx(){
-        System.out.println("小鸟增加的");
-        return "司法所发的";
+
+    public String test(){
+        System.out.println("老鸟增加");
+        return "ssd";
     }
+    public String test2(){
+        System.out.println("老鸟增加");
+        return "ssd";
+    }
+    public String test3(){
+        System.out.println("老鸟增加");
+        return "ssd";
+    }
+
+
+
 }
