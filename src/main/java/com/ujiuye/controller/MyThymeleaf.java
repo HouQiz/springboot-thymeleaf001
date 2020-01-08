@@ -62,4 +62,9 @@ public class MyThymeleaf {
         m.addAttribute("str",str);
         return "demo6";
     }
+
+    public String xx(){
+        System.out.println("小鸟增加的");
+        return "司法所发的";
+    }
 }
