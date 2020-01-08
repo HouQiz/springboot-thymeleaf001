@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--要使用模板引擎，所以要加上这个thymeleaf命名空间-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--如果取常量的话是#{}，变量是${}-->
+    <title th:text="#{title}">Title</title>
+</head>
+<body>
+    <h1 ></h1>
+    <input type="text" th:value="${user}"/>
+    <br>
+    <h1 th:text="|欢迎来到${user}中公教育|"></h1>
+
+    <a th:href="${href}" th:text="|欢迎来到${user}中公教育|"></a>
+</body>
+</html>

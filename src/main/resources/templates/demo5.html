@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--要使用模板引擎，所以要加上这个thymeleaf命名空间-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--如果取常量的话是#{}，变量是${}-->
+    <title th:text="#{title}">Title</title>
+    <!--不渲染用第一个样式，以渲染用第二个样式-->
+    <!--静态资源引入的方式-->
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.2.1/css/bootstrap-grid-jsf.css"
+          th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.css}"/>
+</head>
+<body>
+<!--保留原来的位置，把整个节点插入进来-->
+<div th:insert="~{common :: myhead}"></div>
+
+<h1 th:if="${flag}=='yes'">中公教育</h1>
+<!--如果相等，我不显示，如果不等于显示-->
+<h1 th:unless="${flag2}=='yes'">中公教育</h1>
+
+<!--分支语句，必须在同一节点下面，否则报错-->
+<div th:switch="${flag3}">
+    <h1 th:case="admin">admin</h1>
+    <h1 th:case="${flag2}">flag2</h1>
+    <h1 th:case="${flag3}">flag3</h1>
+</div>
+
+<div th:insert="~{common :: myfoot}"></div>
+<!--显示页面时覆盖原来的位置-->
+<div th:replace="~{common :: myfoot}"></div>
+<!--去掉包含的节点，显示本节点-->
+<div th:include="~{common :: myfoot}"></div>
+
+</body>
+</html>
+</html>

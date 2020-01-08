@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--要使用模板引擎，所以要加上这个thymeleaf命名空间-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--如果取常量的话是#{}，变量是${}-->
+    <title th:text="#{title}">Title</title>
+</head>
+<body>
+    id<span th:text="${user.id}"></span>
+    name<span th:text="${user.name}"></span>
+    age<span th:text="${user.age}"></span>
+
+    addre:<span th:text="${map.addre}"></span>
+    addre:<span th:text="${map.addre2}"></span>
+    addre:<span th:text="${map.addre3}"></span>
+
+    <img th:src="${map.pic}">
+</body>
+</html>

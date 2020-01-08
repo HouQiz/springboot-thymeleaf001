@@ -1,0 +1,7 @@
+spring:
+  thymeleaf:
+    cache: false  #先把缓存给禁用掉，因为不禁的话改了是不变的
+
+  messages:
+    encoding: UTF-8
+    basename: message

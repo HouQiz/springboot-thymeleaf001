@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--要使用模板引擎，所以要加上这个thymeleaf命名空间-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--如果取常量的话是#{}，变量是${}-->
+    <title th:text="#{title}">Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>truefalse</th>
+        <th>序号</th>
+        <th>id</th>
+        <th>name</th>
+        <th>price</th>
+    </tr>
+    <tr th:each="user,iterStat:${list}">
+        <!--应该是从1开始算的-->
+        <td th:text="${iterStat.even}"></td>
+        <td th:text="${iterStat.index}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"> </td>
+        <td th:text="${user.age}"></td>
+    </tr>
+</table>
+</body>
+</html>
