@@ -62,4 +62,19 @@ public class MyThymeleaf {
         m.addAttribute("str",str);
         return "demo6";
     }
+
+
+    public String test(){
+        System.out.println("老鸟增加");
+        return "ssd";
+    }
+    public String test2(){
+        System.out.println("老鸟增加");
+        return "ssd";
+    }
+    public String test3(){
+        System.out.println("老鸟增加");
+        return "ssd";
+    }
+
 }
